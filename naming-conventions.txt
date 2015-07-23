@@ -1,0 +1,6 @@
+Plugin Name -- Postmatic For Caldera Forms
+Text domain -- cf-postmatic
+Function prefix -- cf_postmatic
+Class prefix - n/a
+Root namespace -- n/a
+Filter Prefix -- n/a

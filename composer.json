@@ -1,0 +1,18 @@
+{
+  "name": "calderawp/cf-postmatic",
+  "description": "Postmatic integration for Caldera Forms",
+  "type": "wordpress-plugin",
+  "keywords": [
+    "wordpress",
+    "postmatic",
+    "caldera"
+  ],
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Josh Pollock",
+      "homepage": "https://CalderaWP.com",
+      "role": "Lead Developer"
+    }
+  ]
+}
