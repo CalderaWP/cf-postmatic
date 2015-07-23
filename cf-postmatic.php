@@ -8,7 +8,7 @@
  *
  * @wordpress-plugin
  * Plugin Name: Postmatic For Caldera Forms
- * Plugin URI:  
+ * Plugin URI:  https://calderawp.com/downloads/postmatic-for-caldera-forms/
  * Description: Postmatic integration for Caldera Forms
  * Version:     0.1.0
  * Author:      Josh Pollock <Josh@CalderaWP.com>
