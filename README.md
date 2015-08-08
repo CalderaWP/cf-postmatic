@@ -1,4 +1,4 @@
-![Banner](https://calderawp.com/wp-content/uploads/2015/04/cwp-logo-horizontal.png)
+![Banner](https://calderawp.com/wp-content/uploads/2015/08/cf-postmatic-banner.png)
 
 Postmatic For Caldera Forms
 ===========================
