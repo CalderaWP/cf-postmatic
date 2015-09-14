@@ -45,7 +45,7 @@ function cf_postmatic_register($processors){
  *
  * @return array
  */
-function cf_postmatic_process( $config, $form ) {
+function cf_postmatic_process( $config, $form, $transdata ) {
 	if ( ! class_exists( 'Prompt_Api' ) ) {
 		return array(
 			'type'=>'error',
@@ -53,6 +53,7 @@ function cf_postmatic_process( $config, $form ) {
 		);
 	}
 
+	global $cf_postmatic_notice;
 	$_message = Caldera_Forms::do_magic_tags( $config[ 'success_message' ] );
 	if ( ! empty ( $_message ) ) {
 		$message = $_message;
@@ -80,17 +81,40 @@ function cf_postmatic_process( $config, $form ) {
 			);
 			break;
 		case Prompt_Api::CONFIRMATION_SENT:
-			return array(
+
+			$cf_postmatic_notice = array(
 				'type'=>'success',
 				'note' => $message
 			);
+
 			break;
 		case Prompt_Api::OPT_IN_SENT:
-			return array(
+			$cf_postmatic_notice = array(
 				'type'=>'success',
 				'note' => $message
 			);
 			break;
 	}
+
+}
+
+/**
+ * Add our success notices if needed.
+ *
+ * @since 1.0.1
+ *
+ * @uses "caldera_forms_render_notices"
+ *
+ * @param $notices
+ *
+ * @return array
+ */
+function cf_postmatic_maybe_notices( $notices) {
+	global $cf_postmatic_notice;
+	if ( is_array( $cf_postmatic_notice ) && ! empty( $cf_postmatic_notice ) ) {
+		$notices[] = $cf_postmatic_notice;
+	}
+
+	return $notices;
 
 }

@@ -32,6 +32,9 @@ define( 'CF_POSTMATIC_VER', '1.0.0' );
 // add filter to register addon with Caldera Forms
 add_filter('caldera_forms_get_form_processors', 'cf_postmatic_register');
 
+//show success notices
+add_filter( 'caldera_forms_render_notices', 'cf_postmatic_maybe_notices' );
+
 // pull in the functions file
 include CF_POSTMATIC_PATH . 'includes/functions.php';
 
