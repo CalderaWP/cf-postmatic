@@ -47,6 +47,7 @@ function cf_postmatic_register($processors){
  */
 function cf_postmatic_process( $config, $form, $transdata ) {
 	if ( ! class_exists( 'Prompt_Api' ) ) {
+		$x = 1;
 		return array(
 			'type'=>'error',
 			'note' => __( 'Postmatic is not active.', 'cf-postmatic' ),
@@ -70,7 +71,7 @@ function cf_postmatic_process( $config, $form, $transdata ) {
 	switch ( $status ) {
 		case Prompt_Api::INVALID_EMAIL:
 			return array(
-				'type'=>'error',
+				'type' =>'error',
 				'note' => __( "Invalid email address.", 'cf-postmatic' )
 			);
 			break;
@@ -109,10 +110,10 @@ function cf_postmatic_process( $config, $form, $transdata ) {
  *
  * @return array
  */
-function cf_postmatic_maybe_notices( $notices) {
+function cf_postmatic_maybe_notices( $notices ) {
 	global $cf_postmatic_notice;
 	if ( is_array( $cf_postmatic_notice ) && ! empty( $cf_postmatic_notice ) ) {
-		$notices[] = $cf_postmatic_notice;
+		$notices[ $cf_postmatic_notice[ 'type' ] ][ 'note' ] =  $cf_postmatic_notice[ 'note' ];
 	}
 
 	return $notices;
