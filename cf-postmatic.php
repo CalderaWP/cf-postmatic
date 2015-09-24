@@ -10,7 +10,7 @@
  * Plugin Name: Postmatic For Caldera Forms
  * Plugin URI:  https://calderawp.com/downloads/postmatic-for-caldera-forms/
  * Description: Postmatic integration for Caldera Forms
- * Version: 1.2.1
+ * Version: 1.0.1
  * Author:      Josh Pollock <Josh@CalderaWP.com>
  * Author URI:  http://calderawp.com
  * Text Domain: cf-postmatic
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
 // define constants
 define( 'CF_POSTMATIC_PATH',  plugin_dir_path( __FILE__ ) );
 define( 'CF_POSTMATIC_URL',  plugin_dir_url( __FILE__ ) );
-define( 'CF_POSTMATIC_VER', '1.2.1' );
+define( 'CF_POSTMATIC_VER', '1.0.1' );
 
 // add filter to register addon with Caldera Forms
 add_filter('caldera_forms_get_form_processors', 'cf_postmatic_register');

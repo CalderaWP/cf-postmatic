@@ -1,6 +1,6 @@
 {
   "name": "cf-postmatic",
-  "version": "1.2.1",
+  "version": "1.0.1",
   "description": "Mailchimp integration for Caldera Forms",
   "repository": {
     "type": "git",
